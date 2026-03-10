@@ -1,0 +1,18 @@
+{
+  "name": "HttpApiLan",
+  "rootNamespace": "",
+  "references": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [
+    "0Harmony",
+    "Timberborn.ModManagerScene.dll",
+    "Timberborn.HttpApiSystem.dll"
+  ],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

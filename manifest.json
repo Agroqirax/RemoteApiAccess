@@ -1,0 +1,12 @@
+{
+  "Name": "Http Api Access from Lan",
+  "Version": "1.0.12.3",
+  "Id": "Agroqirax.HttpApiLan",
+  "MinimumGameVersion": "1.0.11.0",
+  "Description": "Allows the built-in HTTP API to accept connections from the local network, not just localhost.",
+  "RequiredMods": [
+    {
+      "Id": "Harmony"
+    }
+  ]
+}
