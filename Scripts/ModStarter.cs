@@ -9,7 +9,7 @@ namespace HttpApiLan
         public void StartMod(IModEnvironment modEnvironment)
         {
             Debug.Log("[HttpApiLan] Applying HttpListener LAN patch...");
-            var harmony = new Harmony("agroqirax.httpapilan");
+            var harmony = new Harmony("Agroqirax.RemoteApiAccess");
             harmony.PatchAll();
             Debug.Log("[HttpApiLan] Patch applied.");
         }

@@ -1,5 +1,5 @@
 {
-  "name": "HttpApiLan",
+  "name": "RemoteApiAccess",
   "rootNamespace": "",
   "references": [],
   "includePlatforms": [],
@@ -9,7 +9,8 @@
   "precompiledReferences": [
     "0Harmony",
     "Timberborn.ModManagerScene.dll",
-    "Timberborn.HttpApiSystem.dll"
+    "Timberborn.HttpApiSystem.dll",
+    "Bindito.Core.dll"
   ],
   "autoReferenced": true,
   "defineConstraints": [],
