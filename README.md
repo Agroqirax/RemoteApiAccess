@@ -25,5 +25,5 @@ This mod removes some security restrictions. This is fine as long as you underst
 ## Install
 
 - [Steam workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3682669754): Click subscribe
-- [Mod.io](https://mod.io/g/timberborn/m/remote-api-access): Download & extract to `~/Documents/Timberborn/Mods/HttpApiLan`.
-- [Github](https://github.com/agroqirax/remoteapiaccess/releases/latest): Download & extract to `~/Documents/Timberborn/Mods/HttpApiLan`.
+- [Mod.io](https://mod.io/g/timberborn/m/remote-api-access): Download & extract to `~/Documents/Timberborn/Mods/RemoteApiAccess`.
+- [Github](https://github.com/agroqirax/remoteapiaccess/releases/latest): Download & extract to `~/Documents/Timberborn/Mods/RemoteApiAccess`.
