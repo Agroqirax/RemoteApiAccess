@@ -3,7 +3,7 @@ using System.Reflection;
 using Timberborn.HttpApiSystem;
 using UnityEngine;
 
-namespace HttpApiLan
+namespace RemoteApiAccess
 {
     [HarmonyPatch(typeof(HttpApi), "Start")]
     internal static class HttpApiStartPatch
@@ -15,7 +15,7 @@ namespace HttpApiLan
             // Temporarily set Url to the + variant so HttpListener binds correctly
             string lanUrl = $"http://+:{__instance.Port}/";
             Traverse.Create(__instance).Property("Url").SetValue(lanUrl);
-            Debug.Log($"[HttpApiLan] Temporarily set URL to {lanUrl} for HttpListener binding");
+            Debug.Log($"[Remote Api Access] Temporarily set URL to {lanUrl} for HttpListener binding");
         }
 
         static void Postfix(HttpApi __instance)
@@ -24,7 +24,7 @@ namespace HttpApiLan
             // (Do this whether Start succeeded or failed)
             string localhostUrl = $"http://localhost:{__instance.Port}/";
             Traverse.Create(__instance).Property("Url").SetValue(localhostUrl);
-            Debug.Log($"[HttpApiLan] Restored URL to {localhostUrl}");
+            Debug.Log($"[Remote Api Access] Restored URL to {localhostUrl}");
         }
     }
 }

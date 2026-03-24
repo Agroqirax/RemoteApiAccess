@@ -3,7 +3,7 @@ using System.Net;
 using System.Threading.Tasks;
 using Timberborn.HttpApiSystem;
 
-namespace HttpApiLan
+namespace RemoteApiAccess
 {
     // Add CORS headers to every response via the single Write() method
     [HarmonyPatch(typeof(HttpListenerContextExtensions), "Write")]

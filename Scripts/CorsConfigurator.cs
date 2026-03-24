@@ -1,7 +1,7 @@
 using Bindito.Core;
 using Timberborn.HttpApiSystem;
 
-namespace HttpApiLan
+namespace RemoteApiAccess
 {
     [Context("Game")]
     public class CorsConfigurator : Configurator
