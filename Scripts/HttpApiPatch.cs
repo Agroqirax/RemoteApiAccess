@@ -18,6 +18,8 @@ namespace RemoteApiAccess
             Debug.Log($"[Remote Api Access] Temporarily set URL to {lanUrl} for HttpListener binding");
         }
 
+        private static MdnsAdvertiser _mdns;
+
         static void Postfix(HttpApi __instance)
         {
             // Restore Url to localhost so UriBuilder and the UI work correctly
@@ -25,6 +27,10 @@ namespace RemoteApiAccess
             string localhostUrl = $"http://localhost:{__instance.Port}/";
             Traverse.Create(__instance).Property("Url").SetValue(localhostUrl);
             Debug.Log($"[Remote Api Access] Restored URL to {localhostUrl}");
+
+            _mdns?.Dispose();
+            _mdns = new MdnsAdvertiser(__instance.Port);
+            _mdns.Start();
         }
     }
 }

@@ -1,7 +1,8 @@
 # Remote Api Access
 
 Accepts API requests from any host on the network, instead of only localhost.
-Also adds the [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) headers so websites can make requests without being blocked by the browser.
+Also adds [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) headers so websites can make requests without being blocked by the browser.
+Also advertises itself using [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS) so apps and services can find timberborn without you entering the IP address.
 
 TL;DR This allows other devices (and websites) to access the timberborn API
 
