@@ -7,9 +7,11 @@
   "allowUnsafeCode": false,
   "overrideReferences": false,
   "precompiledReferences": [
-    "0Harmony",
+    "0Harmony.dll",
     "Timberborn.ModManagerScene.dll",
     "Timberborn.HttpApiSystem.dll",
+    "Timberborn.SingletonSystem.dll",
+    "Timberborn.Versioning.dll",
     "Bindito.Core.dll"
   ],
   "autoReferenced": true,
