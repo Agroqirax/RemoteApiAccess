@@ -28,3 +28,31 @@ This mod removes some security restrictions. This is fine as long as you underst
 - [Steam workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3682669754): Click subscribe
 - [Mod.io](https://mod.io/g/timberborn/m/remote-api-access): Download & extract to `~/Documents/Timberborn/Mods/RemoteApiAccess`.
 - [Github](https://github.com/agroqirax/remoteapiaccess/releases/latest): Download & extract to `~/Documents/Timberborn/Mods/RemoteApiAccess`.
+
+## Technical details
+
+The folowing headers are added to all responses:
+
+```txt
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: *
+Access-Control-Max-Age: 86400
+```
+
+Preflight requests (`OPTIONS`) are answered with the same headers and a `204` status code.
+
+The API listens on `http://+:<port>` and the UI shows `http://<ip>:<port>`.
+
+The API is advertised using mDNS/zeroconf as follows:
+
+```txt
+Service Type: _timberborn._tcp
+Service Name: Timberborn on <hostname>
+Domain Name: local
+Interface: wlo1 IPv4
+Address: <hostname>.local/<ip>:<port>
+TXT version = <version>
+TXT base_url = http://<ip>:<port>
+TXT location_name = Timberborn on <hostname>
+```
